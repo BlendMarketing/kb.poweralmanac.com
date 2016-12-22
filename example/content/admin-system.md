@@ -10,7 +10,7 @@ The PowerAlmanac Admin System (also referred to as **iCube**) used by voice agen
 There are 4 basic roles in the PA Admin System: **Process Initiator** (PI), **Voice Agents** (VA), **Quality Checker** (QC), and **Final Approver** (FA). Ron and Nick have full Administrator access to the PA Admin System.
 
 <img src="images/admin-roles.png"/>
-!(images/admin-roles.png)
+![roles](images/admin-roles.png)
 
 Raneto is a Knowledgebase platform for [Node.js](http://nodejs.org) that uses static
 [Markdown](http://daringfireball.net/projects/markdown) files to power the knowledgebase.
