@@ -4,7 +4,7 @@
 var config = {
 
   // Your site title (format: page_title - site_title)
-  site_title: 'Raneto Docs',
+  site_title: 'Power Almanac Documentation',
 
   // The base URL of your site (can use %base_url% in Markdown files)
   base_url: '',
@@ -56,7 +56,7 @@ var config = {
   authentication_for_edit: true,
 
   // Google OAuth
-  googleoauth: false,
+  googleoauth: true,
   oauth2 : {
     client_id: 'GOOGLE_CLIENT_ID',
     client_secret: 'GOOGLE_CLIENT_SECRET',
