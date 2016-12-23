@@ -63,7 +63,7 @@ Production database is **government** and it also includes many dynamic user gen
 searches, payments (pay_*), and downloads (,s_dl*, i_dl*, u_dl*)  
 
 ## Use Case 1 (UC1): Power Almanac New Account Registration/Subscription
-Image 1
+![roles](images/nick1.png)
 
 After filling in the necessary registration forms, the final page will transfer the user to the PayPal hosted
 checkout page. Processing is done securely (https) on PayPal servers. Upon completion from PayPal, there are
@@ -84,7 +84,7 @@ SQL Routines used: UpdateSubscription, LogResponse
 Tables & Fields modified: RegisteredUsers, PayPalTransactions
 
 ## Use Case 2 (UC2): Purchasing Leads with Sufficient Credits
-Image 2
+![roles](images/nick2.png)
 
 After completing a Power Almanac search and previewing the results, the user wants to download the detailed
 leads. The user is presented with a ‘checkouts’ screen showing how the purchase amount is calculated (based on
@@ -100,7 +100,7 @@ Shell scripts: SaveCurrentDownload
 Tables & Fields modified: RegisteredUsers , UserPay (sub-users only)
 
 ## Use Case 3 (UC3): Purchasing Leads without Sufficient Credits
-Image 3
+![roles](images/nick3.png)
 
 Continuing from UC2, from the ‘checkout’ screen, the outstanding amount the user needed to ‘top up’ is
 calculated. This is the amount passed to the secured PayPal server. Once the user agreed to the amount needed
