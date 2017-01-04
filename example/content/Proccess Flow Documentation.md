@@ -1,58 +1,9 @@
-## Database Questions
-
-##### 1. **Where's the admin system hosted?**  
-Not sure if you are referring to the database access or the data entry admin system.  
-###### Voice Agent System 
-This is hosted on Amazon Web Service (AWS) at: http://www.poweralmanac.com/jxarh/  
-Also referred to as **iCube**.  
-
-Roles are: Process Initiator (PI), Voice Agents (VA), Quality Checker (QC), and FinalApprover(FA). Workflowis from VA to QC (and maybe back to VA if errors found) to FA (and maybe back to VA/QC for errors). Once a government is in the FAstage, it gets processed and moved into production(Data Uploader).  
-
-Implemented with a combination of PHP, YUI,SQL, and stored procedure calls like the main Power Almanac application.  
-
-*Let me know if you want to access or more details as there are many stored procedures and PHP code involved...* 
-
-###### MySQL Database Access  
-Hosted on AWS and accessible via http://poweralmanac.com/phpmyadminwith rootuser account.This is how I access the database. Sagi does it differently andprobably use SSH. I usePuTTY on Windows with the PPK key file (pagenm1.ppk) for shell accesswhen necessary.
-
-##### 2.**Where's that database stored?**  
-On AWSRDS instance and EC2. EC2 and RDS instances but created and configured by a third party AWS expert in Israel.Will need to tap Hanan and Etzion for details.
-
-##### 3.**What happens on the weekly updates?**  
-The data verification team in the Philippines finishes all updates before the weekly Sunday updates. All committed changes(all government ID in the work queue in FAstatus)are push from the iCube Government databases to the production Government databases. And the rest of the scripts to create the Analyze and Search meta-tables get run after that.More details on all scripts and schedule from Sagi...
-
-##### 4.**What's the process to change the name of a city?**  
-Need to ask Sagi...  
-
-##### 5. **How do we update the demographic data by zip code?**
-Need to ask Sagi...  
-##### 6. **How does data transform work for the analyze tool**
-This is a BIG one. The Analyze tool is like an Excel Pivot table. You want to be able to view the data in various
-configurations. But doing it in real-time is agonizingly slow. So we decided to pre-calculate all the possible
-combinations during the weekly updates process into basic building blocks (analyze meta-tables). These analyze
-meta-tables are quickly presentable without too much post-processing for the TALLY THE RECORDS view - the
-ANALYZE PHP live code assemble these building blocks (SQL reads) based on the user selections from the dropdown
-menu. But it still requires some processing (should be done in less than 5 minutes real-time) for the final
-presentable data for the COMPARE SPENDING view. The compare spending final processing is started in the
-background when the ANALYZE view is chosen initially (showing the TALLY spreadsheet). The PHP code checks
-for a completion flag in the database before trying to display the COMPARE view. Once completed, the tables
-are quickly read and displayed to the user.
-More details from Sagi on the SQL code...  
-
-##### 7. **Descriptions of any recurring database maintenance script**  
-Need to ask Sagi...  
-
-##### 8. **Table naming nomenclature for all the rest of the tables and how they’re created**
-Need to ask Sagi...
-
-##### 9. **Could you update the ERD you sent us previously to include any application tables that aren’t on it?**
-Need to ask Sagi...  
-
-## Programming Questions
+## Process Flows
+**Mainly authored by Nick with few edits**  
 * **A process flow documentation of an order (what are all the routines called, steps people go through, part of
 its branching, one set versus another based on amount of credits, when you get kicked out to PayPal to buy
 more credits etc.)**
-The documentation that follows is based on how I implemented this a few years back - Jon might have changed
+The documentation that follows is based on how I(Nick) implemented this a few years back - Jon might have changed
 the process flow and more...  
 Each of the four use cases are documented as much as I can remember and flow charts drawn in the following
 sections. IF you need even deeper details on each of these use cases, please ask.  
