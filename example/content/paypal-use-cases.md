@@ -1,5 +1,5 @@
-# Power Almanac- Pay Pal- Use- Cases  
-Exported at: Thu Apr 14 2016 08:25:23 GMT-0700 (Pacif ic Daylight Time)   
+# PayPal Use Cases  
+
 
 ### UC1: New Account  
 ![roles](images/paypal1.png)

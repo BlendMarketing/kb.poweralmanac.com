@@ -1,6 +1,6 @@
 Power Almanac Libraries
-Version 1.0.0
-12/28/2010
+
+**This is in it's original form, and is pretty old, dated 12/28/2010. However, it may still be useful**
 The screenshots are just conceptual representations of where some of the content will be used after calling
 the appropriate libraries or routines. The look and feel will definitely change.
 **Assumptions:**
