@@ -1,10 +1,12 @@
-# Original Documentation Questions for Sagi from Blend (Completed 7.8.16)
-### **Where is the admin system hosted?**
+# Database Questions
+## **Where is the admin system hosted?**
 not sure I understand your question. you have the icube_govenment database to update government+officials and insert new officials.
 
+## MySQL Database Access  
+Hosted on AWS and accessible via http://poweralmanac.com/phpmyadmin with rootuser account.This is how I access the database. Sagi does it differently and probably use SSH. I (Nick) use PuTTY on Windows with the PPK key file (pagenm1.ppk) for shell access when necessary.
 
 
-### What's the process to change the name of a city?
+## What's the process to change the name of a city?
 update all_Data table +government_officials table.
 
 ## How do we update the demographic data by zipcode?

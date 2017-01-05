@@ -68,11 +68,11 @@ var config = {
   credentials    : [
     {
       username : 'admin',
-      password : 'password'
+      password : 'ltbL1010'
     },
     {
       username : 'admin2',
-      password : 'password'
+      password : 'ltbL1010'
     }
   ],
 
